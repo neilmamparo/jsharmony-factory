@@ -137,3 +137,42 @@ PRINT STYLESHEET
   <%-rootcss%> .xhead { height: 90px; }
   <%-rootcss%> .xtoplinks { display:none !important; }
 }
+
+/*
+=============
+VERTICAL MENU
+=============
+*/
+
+<%-rootcss%> .xmenuvertical {
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:220px;
+  height:100%;
+}
+
+<%-rootcss%> .xmenuvertical .xmenu {
+  display:block;
+  width:220px;
+}
+
+<%-rootcss%> .xmenuvertical .xmenuitem {
+  display:block;
+  width:220px;
+  box-sizing:border-box;
+}
+
+<%-rootcss%> .xmenuvertical .xsubmenu {
+  display:none;
+  position:absolute;
+  top:0px;
+  left:220px;
+  width:220px;
+}
+
+<%-rootcss%> .xmenuvertical .xsubmenuitem {
+  display:block;
+  width:220px;
+  box-sizing:border-box;
+}

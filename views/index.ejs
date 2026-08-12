@@ -7,7 +7,7 @@
 <title><%=jsh.Config.app_name%> - <%= title %></title>
 <link href='<%-req.jshsite.publicurl%>fonts/jsHarmonyFonts.css' rel='stylesheet' type='text/css' />
 <link rel="stylesheet" type="text/css" href="<%-req.baseurl%>application.css" />
-<script type="text/javascript" src="<%-req.jshsite.publicurl%>js/jsHarmony.js"></script>
+<script type="text/javascript" src="<%-req.jshsite.publicurl%>js/jsHarmony.dev.js"></script>
 <script type="text/javascript">var <%-req.jshsite.instance%> = new jsHarmony(<%-req.getJSClientParams()%>);</script>
 <script type="text/javascript" src="<%-req.jshsite.publicurl%>js/site.js"></script>
 <script type="text/javascript" src="<%-req.baseurl%>application.js"></script>
@@ -33,9 +33,9 @@
   <div class="xlogo">
     <a class="xlogoimg" href="<%-ejsext.iif(req.isAuthenticated,'/',req.jshsite.home_url)%>"><img src="<%-req.jshsite.publicurl%>images/logo.png" alt="<%=jsh.Config.app_name%>" title="<%=jsh.Config.app_name%>" /></a>
     <a class="xsublogo" href="<%-ejsext.iif(req.isAuthenticated,'/',req.jshsite.home_url)%>"><%=req.jshsite.title%></a>
-  </div>
 
-  <%-jsh.RenderView('jsh_menu_horizontal',locals)%>
+  </div>
+  <%-jsh.RenderView('jsh_menu_vertical',locals)%>
 </div>
 
 <div class="xbody with_xhead"><%-ejsext.BreadCrumbs(req, jsh, modelid)%><% if(title){ %>

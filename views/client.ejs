@@ -8,7 +8,7 @@
 <title><%=jsh.Config.app_name%> - <%= title %></title>
 <link href='<%-req.jshsite.publicurl%>fonts/jsHarmonyFonts.css' rel='stylesheet' type='text/css' />
 <link rel="stylesheet" type="text/css" href="<%-req.baseurl%>application.css" />
-<script type="text/javascript" src="<%-req.jshsite.publicurl%>js/jsHarmony.js"></script>
+<script type="text/javascript" src="<%-req.jshsite.publicurl%>js/jsHarmony.dev.js"></script>
 <script type="text/javascript">var <%-req.jshsite.instance%> = new jsHarmony(<%-req.getJSClientParams()%>);</script>
 <script type="text/javascript" src="<%-req.jshsite.publicurl%>js/site.js"></script>
 <script type="text/javascript" src="<%-req.baseurl%>application.js"></script>
@@ -33,7 +33,11 @@
     <a class="xsublogo" href="<%-ejsext.iif(req.isAuthenticated,'/client/',req.jshsite.home_url)%>"><%=req.jshsite.title%></a>
   </div>
   
-  <%-jsh.RenderView('jsh_menu_horizontal',locals)%>
+  <%-jsh.RenderView('jsh_menu_vertical',locals)%>
+</div>
+
+<div style="position:fixed;top:0;right:0;z-index:99999;background:red;color:white;">
+  TEST CLIENT EJS
 </div>
 
 <div class="xbody with_xhead"><%-ejsext.BreadCrumbs(req, jsh, modelid)%><% if(title){ %>
